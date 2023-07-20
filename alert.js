@@ -1,6 +1,5 @@
 alert('hello Muwatok')
 
-const fileHandle = await window.showSaveFilePicker();
-const fileStream = await fileHandle.createWritable();
-await fileStream.write(new Blob(["CONTENT"], {type: "text/plain"}));
-await fileStream.close();
+var blob = new Blob(["coba"],
+                { type: "text/plain;charset=utf-8" });
+            saveAs(blob, "static.txt");
